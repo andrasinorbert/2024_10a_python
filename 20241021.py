@@ -113,19 +113,3 @@ hatvany=lambda num1, num2: num1**num2
 print(hatvany(2,3))
 negyzet=lambda num: hatvany(num, 2)
 print(negyzet(5))
-
-"""
-    köv óra eleje:
-    a lambda fügvényt ha meg akarjuk hívni, akkor nem kapunk "hint"-et, hogy mi milyen tipusú
-    Erre egy megoldás a következő:
-"""
-
-from typing import Callable
-hatvany2: Callable[[int, int], int] = lambda x,y: x**y
-
-# Ekkor ha meg akarjuk hívni a hatvany2 függvényt, akkor kiírja a hinteket
-
-# így is írhatunk lambda functiont, ha azonnal szeretnénk paraméterekkel ellátni:
-
-print((lambda x,y:x**y)(2,3))
-
