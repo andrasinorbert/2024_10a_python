@@ -16,8 +16,11 @@ elemek=[]
 import random
 
 for i in range(listameret):
-    x=random.randint(1,5)
-    elemek.append(x)
+    #x=random.randint(1,5)
+    #elemek.append(x)
+    elemek.append(random.randint(1,5))
+
+#[elemek.append(random.randint(1,5)) for i in range(listameret)]
     
 print("A lista tartalma: ", end="")
 print(elemek)
