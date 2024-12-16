@@ -17,7 +17,7 @@ def fajlbeolvasas(fajlnev, adatelvalasztoChar=" "):
         sor_lista=sor.split(adatelvalasztoChar)
         
         nevek.append(sor_lista[0])
-        print(sor_lista)
+        #print(sor_lista)
         szamlista=[]
         for j in range(1,len(sor_lista)):
             szamlista.append(int(sor_lista[j]))
@@ -30,5 +30,15 @@ def getNevIndex(nevek:list[str],keresendonev:str):
         i+=1
     return i
 
+def getSzamokFromNev(szamokMatrix:list[list[int]],nevek:list[str], keresendoNev:str):
+    index=getNevIndex(nevek,keresendoNev)
+    return szamokMatrix[index]
+
 (nevek, szamok)=fajlbeolvasas("input2")
 print(getNevIndex(nevek, "Zoé"))
+print(szamok)
+print(f"Zoé értékei: {getSzamokFromNev(szamok, nevek,'Zoé')}")
+
+# 1. feladat:
+gezaSzamai=getSzamokFromNev(szamok, nevek, "Géza")
+print(gezaSzamai)
