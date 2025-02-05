@@ -1,0 +1,16 @@
+
+@startuml
+class Ember {
+    name
+    age
+    eszik()
+    iszik()
+}
+class Tanulo{
+    kreta_id
+    tanul()
+    játszik()
+}
+
+@enduml
+
